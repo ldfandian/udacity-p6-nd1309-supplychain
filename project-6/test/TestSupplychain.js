@@ -143,11 +143,6 @@ contract('SupplyChain', function(accounts) {
 
             assert.equal(eventEmitted, true, 'Invalid event emitted')        
         }
-        
-        // now, let's validate roles-added events
-        // we cannot do it immediately after the roles added, the delay is to give it some time to happen
-        assert.equal(eventsRoleAdded[0] && eventsRoleAdded[1] && eventsRoleAdded[2] && eventsRoleAdded[3],
-            true, 'Invalid events emitted: ' + eventsRoleAdded)        
 
         // condition 2: good harvestItem
         {
@@ -177,6 +172,11 @@ contract('SupplyChain', function(accounts) {
 
             assert.equal(eventEmitted, true, 'Invalid event emitted')        
         }
+        
+        // now, let's validate roles-added events
+        // we cannot do it immediately after the roles added, the delay is to give it some time to happen
+        assert.equal(eventsRoleAdded[0] && eventsRoleAdded[1] && eventsRoleAdded[2] && eventsRoleAdded[3],
+            true, 'Invalid events emitted: ' + eventsRoleAdded)        
 
         // condition 3: bad harvestItem, wrong existing upc
         {
