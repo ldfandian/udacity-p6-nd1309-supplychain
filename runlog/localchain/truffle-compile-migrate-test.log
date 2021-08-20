@@ -1,0 +1,160 @@
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# truffle compile --all  
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/coffeeaccesscontrol/ConsumerRole.sol...
+Compiling ./contracts/coffeeaccesscontrol/DistributorRole.sol...
+Compiling ./contracts/coffeeaccesscontrol/FarmerRole.sol...
+Compiling ./contracts/coffeeaccesscontrol/RetailerRole.sol...
+Compiling ./contracts/coffeeaccesscontrol/Roles.sol...
+Compiling ./contracts/coffeebase/SupplyChain.sol...
+Compiling ./contracts/coffeecore/Ownable.sol...
+Writing artifacts to ./build/contracts
+
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# truffle migrate --reset
+Using network 'development'.
+
+Running migration: 1_initial_migration.js
+  Replacing Migrations...
+  ... 0x1ca26bfb745b4ca773ca9a6994e757e0d44ecbb983800efbf4b4b2a0883461c3
+  Migrations: 0x4cf8864c5048bb85aa2536b8211d713fbabc7f59
+Saving successful migration to network...
+  ... 0x81d175cb2b5d23e8450e1cec37b1ecaf8712d4404269bc1b6251f19c69325ba7
+Saving artifacts...
+Running migration: 2_deploy_contracts.js
+  Replacing FarmerRole...
+  ... 0x16b405b6b7848a1e4722a3aec0eb0f1d5f52d21b13c1b92c1af9afe44d2c1057
+  FarmerRole: 0x46befa1907881bc7746144c447005e87b3336c84
+  Replacing DistributorRole...
+  ... 0x02340d035df5d16f88dc17d45968c7e8a1cad231f582dfc6ebd43aa5553a238f
+  DistributorRole: 0x916c2b896060a0210954b09d939bcbb7fae5c668
+  Replacing RetailerRole...
+  ... 0xb656ed988453d13a898b315741c82448e52a91002ca9517793088bc1ee8d3b78
+  RetailerRole: 0x899708ddcf3e7bf78460faac9ea9c52cdae82a0d
+  Replacing ConsumerRole...
+  ... 0x96f289b04944b8add53de315d65b8b6dfe167e26a58383936812b2791fe5c7de
+  ConsumerRole: 0xeb9040db4284cec548ac23ce1541ca1d76b31937
+  Replacing SupplyChain...
+  ... 0x0441330bf943b7a4b130992cc4f65a48421b56124e1d101a491d251d7ebe9149
+  SupplyChain: 0xc994c9f32517af630e2b5522bc2adf8ac95987f8
+Saving successful migration to network...
+  ... 0xc74d3a6f316e4aff7e73d1bfb817f72085385178399388c6fcf326bddae1287a
+Saving artifacts...
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# truffle test
+Using network 'development'.
+
+ganache-cli accounts used here...
+Contract Owner: accounts[0]  0xf1ee211e9fc527a80f71e25ee9ad46034709708c
+Farmer 1: accounts[1]  0x1f06213cc4e5b76210d44ba16a4f4d28f9cf2071
+Farmer 2: accounts[5]  0xa68d858c0bb3c884ade02b7daf1bf63533d1bb05
+Distributor: accounts[2]  0xab62f51fb3df7f4e6b04dd04a341dbdd7c01bc69
+Retailer: accounts[3]  0x1898b41e5393f5fbfd3c2966a9d1096e85d27e31
+Consumer: accounts[4]  0xa8931db2228500ed19682c91f65c110c5e4bf38b
+
+
+  Contract: SupplyChain
+    ✓ Testing smart contract function harvestItem() that allows a farmer to harvest coffee (3467ms)
+    ✓ Testing smart contract function processItem() that allows a farmer to process coffee (461ms)
+    ✓ Testing smart contract function packItem() that allows a farmer to pack coffee (1270ms)
+    ✓ Testing smart contract function sellItem() that allows a farmer to sell coffee (1293ms)
+    ✓ Testing smart contract function buyItem() that allows a distributor to buy coffee (1602ms)
+    ✓ Testing smart contract function shipItem() that allows a distributor to ship coffee (1467ms)
+    ✓ Testing smart contract function receiveItem() that allows a retailer to mark coffee received (1317ms)
+    ✓ Testing smart contract function purchaseItem() that allows a consumer to purchase coffee (1292ms)
+    ✓ Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain (126ms)
+    ✓ Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain (106ms)
+
+
+  10 passing (15s)
+
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# 
+
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# truffle compile --all
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/coffeeaccesscontrol/ConsumerRole.sol...
+Compiling ./contracts/coffeeaccesscontrol/DistributorRole.sol...
+Compiling ./contracts/coffeeaccesscontrol/FarmerRole.sol...
+Compiling ./contracts/coffeeaccesscontrol/RetailerRole.sol...
+Compiling ./contracts/coffeeaccesscontrol/Roles.sol...
+Compiling ./contracts/coffeebase/SupplyChain.sol...
+Compiling ./contracts/coffeecore/Ownable.sol...
+Writing artifacts to ./build/contracts
+
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# truffle migrate --reset
+Using network 'development'.
+
+Running migration: 1_initial_migration.js
+  Replacing Migrations...
+  ... 0x4be29915fa34e68b5faacb54a9d62cbf40bdc88a1e4dd70d6c345e7606f53a89
+  Migrations: 0xfc08d56e0334ff5c20e3af6c6f945206177e0590
+Saving successful migration to network...
+  ... 0xdd80e79cf603f31b6f37a50dfe0b68f8fab8a1517e85d904434e72f7e21234cf
+Saving artifacts...
+Running migration: 2_deploy_contracts.js
+  Replacing FarmerRole...
+  ... 0x51f664b4ba62cfd2e060f0a5db09d019538f642cc0faf48b0a5687971f967e1f
+  FarmerRole: 0x2f929c6b45330e2fc97344e36796b5064bf4d008
+  Replacing DistributorRole...
+  ... 0x0de027e2cf1fd423ada92deeaa00572bcb4a1696662f078d0400d4e7959fdd82
+  DistributorRole: 0x9c1c3771cded93bbafb636467668f66332b0c162
+  Replacing RetailerRole...
+  ... 0x86aef4d078725478696260bfab4dc18c1bb950ad960f336f143d689c65f38fcd
+  RetailerRole: 0x1bbda8fe982093958e6a6090f98ef64cbc35c286
+  Replacing ConsumerRole...
+  ... 0x832ee4f929a68adfe2d10ad14a9f0f32aa7f1c4485d247e257f83051a9797960
+  ConsumerRole: 0xa609cb4c5d024b880b9a5d18d252976e247a4d9c
+  Replacing SupplyChain...
+  ... 0xe4402cc9c85f9838f9b095b27707c6ff9eb98c8d351a4bcdf96dfa8b4638f344
+  SupplyChain: 0x466e52f49cabde18fb33bbad2af91ad5ee616edb
+Saving successful migration to network...
+  ... 0x0a40c50c8849e68b52a4905791fa8db1b6f3564d0d85cde3a4aee3d793ca302e
+Saving artifacts...
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# npm run dev
+
+> supply-chain-E@1.0.0 dev /mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6
+> lite-server
+
+** browser-sync config **
+{
+  injectChanges: false,
+  files: [ './**/*.{html,htm,css,js}' ],
+  watchOptions: { ignored: 'node_modules' },
+  server: {
+    baseDir: [ './', './src', './project-6/build/contracts' ],
+    middleware: [ [Function], [Function] ]
+  },
+  port: 8000
+}
+[Browsersync] Access URLs:
+ -----------------------------------
+       Local: http://localhost:8000
+    External: http://172.17.0.2:8000
+ -----------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ -----------------------------------
+[Browsersync] Serving files from: ./
+[Browsersync] Serving files from: ./src
+[Browsersync] Serving files from: ./project-6/build/contracts
+[Browsersync] Watching files...
+[Browsersync] Couldn't open browser (if you are using BrowserSync in a headless environment, you might want to set the open option to false)
+21.08.20 14:54:08 304 GET /index.html
+21.08.20 14:54:08 304 GET /style.css
+21.08.20 14:54:08 304 GET /js/app.js
+21.08.20 14:54:08 304 GET /js/truffle-contract.js
+21.08.20 14:54:08 304 GET /js/web3.min.js
+21.08.20 14:54:08 200 GET /build/contracts/SupplyChain.json
+21.08.20 14:54:57 304 GET /style.css
+21.08.20 14:55:15 304 GET /index.html
+21.08.20 14:55:15 304 GET /style.css
+21.08.20 14:55:15 304 GET /js/web3.min.js
+21.08.20 14:55:15 304 GET /js/truffle-contract.js
+21.08.20 14:55:15 304 GET /js/app.js
+21.08.20 14:55:15 304 GET /build/contracts/SupplyChain.json
+21.08.20 14:55:24 304 GET /style.css
+21.08.20 14:55:45 304 GET /index.html
+21.08.20 14:55:45 304 GET /style.css
+21.08.20 14:55:45 304 GET /js/truffle-contract.js
+21.08.20 14:55:45 304 GET /js/web3.min.js
+21.08.20 14:55:45 304 GET /js/app.js
+21.08.20 14:55:45 304 GET /build/contracts/SupplyChain.json
+
+
