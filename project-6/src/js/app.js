@@ -95,6 +95,35 @@ App = {
             App.metamaskAccountID = res[0];
 
         })
+
+        // handle account change
+        const refreshAccountFunc = function (accounts) {
+            web3 = new Web3(App.web3Provider);
+            web3.eth.getAccounts(async function(err, res) {
+                if (err) {
+                    console.log('Error:',err);
+                    return;
+                }
+
+                if (res[0] !== App.metamaskAccountID) {
+                    App.metamaskAccountID = res[0];
+                    if (window.ethereum) {
+                        App.web3Provider = window.ethereum;
+                        try {
+                            // Request account access
+                            await window.ethereum.enable();
+                        } catch (error) {
+                            // User denied account access...
+                            console.error("User denied account access")
+                            return;
+                        }
+                    }
+                    console.log('account changed to: ' + App.metamaskAccountID);
+                }
+            })
+        };
+        window.ethereum.on('accountsChanged', refreshAccountFunc);
+        window.ethereum.on('networkChanged', refreshAccountFunc);
     },
 
     initSupplyChain: function () {
@@ -336,7 +365,7 @@ App = {
         App.contracts.SupplyChain.deployed().then(function(instance) {
             return instance.owner.call();
           }).then(function(result) {
-            $("#ftc-item-contactowner").text('Contract Owner: ' + result);
+            $("#ftc-item-contactowner").text('Contract Owner: ' + result + '. Contract Address: ' + App.contracts.SupplyChain.address);
             console.log('getContactOwner', result);
           }).catch(function(err) {
             console.log(err.message);
