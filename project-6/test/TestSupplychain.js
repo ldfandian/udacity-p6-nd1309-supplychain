@@ -386,7 +386,7 @@ contract('SupplyChain', function(accounts) {
             assert.isRejected(supplyChain.sellItem(upc_item2, productPrice2, { from: originFarmerID2 }))
         }
 
-        // condition: bad packItem, wrong upc
+        // condition: bad sellItem, wrong upc
         {
             assert.isRejected(supplyChain.sellItem(100000, productPrice2, { from: originFarmerID }))
         }
@@ -666,13 +666,13 @@ contract('SupplyChain', function(accounts) {
             assert.equal(eventEmitted, true, 'Invalid event emitted')        
         }
 
-        // condition: bad shipItem, wrong item status
+        // condition: bad receiveItem, wrong item status
         {
             assert.isRejected(supplyChain.receiveItem(upc_item1, { from: retailerID }))
             assert.isRejected(supplyChain.receiveItem(upc_item2, { from: retailerID }))
         }
 
-        // condition: bad shipItem, wrong upc
+        // condition: bad receiveItem, wrong upc
         {
             assert.isRejected(supplyChain.receiveItem(100000, { from: distributorID }))
         }
@@ -702,7 +702,7 @@ contract('SupplyChain', function(accounts) {
             })
         }
         
-        // condition: bad shipItem, wrong msg.sender (not from retailer)
+        // condition: bad receiveItem, wrong msg.sender (not from retailer)
         {
             assert.isRejected(supplyChain.shipItem(upc_item2, { from: consumerID }))
         }
@@ -784,7 +784,7 @@ contract('SupplyChain', function(accounts) {
             })
         }
         
-        // condition: bad sellItem, wrong msg.sender (not from consumer)
+        // condition: bad purchaseItem, wrong msg.sender (not from consumer)
         {
             assert.isRejected(supplyChain.purchaseItem(upc_item2, { from: distributorID }))
         }
