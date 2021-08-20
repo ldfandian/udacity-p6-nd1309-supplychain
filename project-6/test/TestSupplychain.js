@@ -72,7 +72,7 @@ contract('SupplyChain', function(accounts) {
     const originFarmLongitude = "144.341490"
     var productID = upc_item1
     const productNotes = "Best beans for Espresso"
-    // const productPrice = web3.toWei(1, "ether")
+    const productPrice = web3.toWei(1, "ether")
 
     const originFarmerID2 = accounts[5]
     const originFarmName2 = "John Doe 2"
@@ -81,7 +81,7 @@ contract('SupplyChain', function(accounts) {
     const originFarmLongitude2 = "24.341490"    
     var productID2 = upc_item2
     const productNotes2 = "Best beans for Espresso 2"
-    // const productPrice2 = web3.toWei(2, "ether")
+    const productPrice2 = web3.toWei(2, "ether")
 
     var itemState = 0
     const distributorID = accounts[2]
@@ -103,8 +103,8 @@ contract('SupplyChain', function(accounts) {
     // 1st Test
     // 
     // After the test case:
-    //   item1 => harvested
-    //   item2 => harvested
+    //   item1 => harvested (newly created)
+    //   item2 => harvested (newly created)
     it("Testing smart contract function harvestItem() that allows a farmer to harvest coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
 
@@ -195,8 +195,8 @@ contract('SupplyChain', function(accounts) {
     // 2nd Test
     // 
     // After the test case:
-    //   item1 => processed
-    //   item2 => harvested
+    //   item1 => processed (was harvested)
+    //   item2 => harvested (was harvested)
     it("Testing smart contract function processItem() that allows a farmer to process coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -260,8 +260,8 @@ contract('SupplyChain', function(accounts) {
     // 3rd Test
     // 
     // After the test case:
-    //   item1 => packed
-    //   item2 => processed
+    //   item1 => packed (was processed)
+    //   item2 => processed (was harvested)
     it("Testing smart contract function packItem() that allows a farmer to pack coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -301,7 +301,7 @@ contract('SupplyChain', function(accounts) {
         {
             // Mark an item as Processed by calling function processtItem()
             assert.isRejected(supplyChain.packItem(upc_item1, { from: originFarmerID }))
-            assert.isRejected(supplyChain.packItem(upc_item2, { from: originFarmerID }))
+            assert.isRejected(supplyChain.packItem(upc_item2, { from: originFarmerID2 }))
         }
 
         // condition: bad packItem, wrong upc
@@ -349,42 +349,197 @@ contract('SupplyChain', function(accounts) {
     })    
 
     // 4th Test
+    // 
+    // After the test case:
+    //   item1 => forSale (was packed)
+    //   item2 => packed (was processed)
     it("Testing smart contract function sellItem() that allows a farmer to sell coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
         // Declare and Initialize a variable for event
-        
-        
         // Watch the emitted event ForSale()
+        var eventEmitted = false
+        await supplyChain.ForSale().watch((err, res) => { eventEmitted = true })
         
+        // condition: good sellItem
+        {
+            // Mark an item as ForSale by calling function sellItem()
+            await supplyChain.sellItem(upc_item1, productPrice, { from: originFarmerID })
 
-        // Mark an item as ForSale by calling function sellItem()
+            // Verify the result set
+            await assertItemResult(supplyChain, upc_item1, {
+                sku: sku_item1,
+                upc: upc_item1,
+                ownerID: originFarmerID,
+                originFarmerID: originFarmerID,
+                originFarmName: originFarmName,
+                originFarmInformation: originFarmInformation,
+                originFarmLatitude: originFarmLatitude,
+                originFarmLongitude: originFarmLongitude,
+                productID: productID,
+                productNotes: productNotes,
+                productPrice: productPrice,
+                itemState: 3,
+                distributorID: 0,
+                retailerID: 0,
+                consumerID: 0,
+            })
+
+            assert.equal(eventEmitted, true, 'Invalid event emitted')        
+        }
         
+        // condition: bad sellItem, wrong item status
+        {
+            // Mark an item as Processed by calling function processtItem()
+            assert.isRejected(supplyChain.sellItem(upc_item1, { from: originFarmerID }))
+            assert.isRejected(supplyChain.sellItem(upc_item2, { from: originFarmerID2 }))
+        }
 
-        // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        
+        // condition: bad sellItem, wrong upc
+        {
+            // Mark an item as Processed by calling function processtItem()
+            assert.isRejected(supplyChain.packItem(100000, { from: originFarmerID }))
+        }
 
-        // Verify the result set
-          
+        // now: prepare item2 to the good status
+        {
+            // Mark an item as Processed by calling function processtItem()
+            await supplyChain.packItem(upc_item2, { from: originFarmerID2 })
+
+            // Verify the result set
+            await assertItemResult(supplyChain, upc_item2, {
+                sku: sku_item2,
+                upc: upc_item2,
+                ownerID: originFarmerID2,
+                originFarmerID: originFarmerID2,
+                originFarmName: originFarmName2,
+                originFarmInformation: originFarmInformation2,
+                originFarmLatitude: originFarmLatitude2,
+                originFarmLongitude: originFarmLongitude2,
+                productID: productID2,
+                productNotes: productNotes2,
+                productPrice: 0,
+                itemState: 2,
+                distributorID: 0,
+                retailerID: 0,
+                consumerID: 0,
+            })
+        }
+
+        // condition: bad sellItem, wrong msg.sender (not from farmer)
+        {
+            // Mark an item as Processed by calling function processtItem()
+            assert.isRejected(supplyChain.packItem(upc_item2, { from: consumerID }))
+        }
+
+        // condition: bad sellItem, wrong msg.sender (from not-owner farmer)
+        {
+            // Mark an item as Processed by calling function processtItem()
+            assert.isRejected(supplyChain.packItem(upc_item2, { from: originFarmerID }))
+        }
     })    
 
     // 5th Test
+    // 
+    // After the test case:
+    //   item1 => sold (was forSale)
+    //   item2 => forSale (was packed)
     it("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
         // Declare and Initialize a variable for event
-        
-        
         // Watch the emitted event Sold()
+        var eventEmitted = false
+        await supplyChain.Sold().watch((err, res) => { eventEmitted = true })
         
+        // condition: good sellItem
+        {
+            let balanceFarmerBeforeTx = await web3.eth.getBalance(originFarmerID);
+            let balanceDistributorBeforeTx = await web3.eth.getBalance(distributorID);
 
-        // Mark an item as Sold by calling function buyItem()
-        
+            // Mark an item as Sold by calling function buyItem()
+            await supplyChain.buyItem(upc_item1, { from: distributorID, value: (productPrice*2) })
 
-        // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        
+            // Verify the result set
+            await assertItemResult(supplyChain, upc_item1, {
+                sku: sku_item1,
+                upc: upc_item1,
+                ownerID: distributorID,
+                originFarmerID: originFarmerID,
+                originFarmName: originFarmName,
+                originFarmInformation: originFarmInformation,
+                originFarmLatitude: originFarmLatitude,
+                originFarmLongitude: originFarmLongitude,
+                productID: productID,
+                productNotes: productNotes,
+                productPrice: productPrice,
+                itemState: 4,
+                distributorID: distributorID,
+                retailerID: 0,
+                consumerID: 0,
+            })
 
-        // Verify the result set
+            assert.equal(eventEmitted, true, 'Invalid event emitted')        
+
+            // check money wallet: farmer
+            let balanceFarmerAfterTx = await web3.eth.getBalance(originFarmerID);
+            let valueFarmer = Number(balanceFarmerAfterTx) - Number(balanceFarmerBeforeTx);
+            assert.equal(valueFarmer, productPrice, 'wrong money transfer found -- farmer')
+            // check money wallet: distributor
+            let balanceDistributorAfterTx = await web3.eth.getBalance(distributorID);
+            let valueDistributor = Number(balanceDistributorBeforeTx) - Number(balanceDistributorAfterTx);
+            assert((valueDistributor > productPrice) && (valueDistributor < (productPrice*1.05)), 'wrong money transfer found -- distributor')
+        }
+
+        // condition: bad sellItem, wrong item status
+        {
+            // Mark an item as Processed by calling function processtItem()
+            assert.isRejected(supplyChain.buyItem(upc_item1, { from: distributorID, value: (productPrice) }))
+            assert.isRejected(supplyChain.buyItem(upc_item2, { from: distributorID, value: (productPrice2) }))
+        }
+
+        // condition: bad sellItem, wrong upc
+        {
+            // Mark an item as Processed by calling function processtItem()
+            assert.isRejected(supplyChain.buyItem(100000, { from: distributorID, value: productPrice2 }))
+        }
+
+        // now: prepare item2 to the good status
+        {
+            // Mark an item as ForSale by calling function sellItem()
+            await supplyChain.sellItem(upc_item2, productPrice2, { from: originFarmerID2 })
+
+            // Verify the result set
+            await assertItemResult(supplyChain, upc_item2, {
+                sku: sku_item2,
+                upc: upc_item2,
+                ownerID: originFarmerID2,
+                originFarmerID: originFarmerID2,
+                originFarmName: originFarmName2,
+                originFarmInformation: originFarmInformation2,
+                originFarmLatitude: originFarmLatitude2,
+                originFarmLongitude: originFarmLongitude2,
+                productID: productID2,
+                productNotes: productNotes2,
+                productPrice: productPrice2,
+                itemState: 3,
+                distributorID: 0,
+                retailerID: 0,
+                consumerID: 0,
+            })
+        }
+
+        // condition: bad sellItem, wrong msg.sender (not from distributor)
+        {
+            // Mark an item as Processed by calling function processtItem()
+            assert.isRejected(supplyChain.buyItem(upc_item2, { from: consumerID, value: productPrice2 }))
+        }
+
+        // condition: bad sellItem, not paid enough
+        {
+            // Mark an item as Processed by calling function processtItem()
+            assert.isRejected(supplyChain.buyItem(upc_item2, { from: distributorID, value: (productPrice2/2) }))
+        }
         
     })    
 
