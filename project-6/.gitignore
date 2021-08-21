@@ -1,2 +1,4 @@
 build/**
 node_modules
+# don't upload rinkeby testnet seed
+*.secret
