@@ -8,7 +8,9 @@ var assert = chai.assert;
 
 // This script is designed to test the solidity smart contract - SuppyChain.sol -- and the various functions within
 // Declare a variable and assign the compiled smart contract artifact
-var SupplyChain = artifacts.require('SupplyChain')
+const SupplyChain = artifacts.require('SupplyChain')
+const Web3 = require('web3')
+const web3 = new Web3(Web3.givenProvider)
 
 async function prepareAcconts(supplyChain, accounts) {
     // We will have 10 Available Accounts
@@ -72,7 +74,7 @@ contract('SupplyChain', function(accounts) {
     const originFarmLongitude = "144.341490"
     var productID = upc_item1
     const productNotes = "Best beans for Espresso"
-    const productPrice = web3.toWei(1, "ether")
+    const productPrice = web3.utils.toWei("1", "ether")
 
     const originFarmerID2 = accounts[5]
     const originFarmName2 = "John Doe 2"
@@ -81,7 +83,7 @@ contract('SupplyChain', function(accounts) {
     const originFarmLongitude2 = "24.341490"    
     var productID2 = upc_item2
     const productNotes2 = "Best beans for Espresso 2"
-    const productPrice2 = web3.toWei(2, "ether")
+    const productPrice2 = web3.utils.toWei("2", "ether")
 
     var itemState = 0
     const distributorID = accounts[2]
@@ -146,8 +148,6 @@ contract('SupplyChain', function(accounts) {
 
         // condition 2: good harvestItem
         {
-            eventEmitted = false
-
             // Mark an item as Harvested by calling function harvestItem()
             await supplyChain.harvestItem(0, originFarmerID2, originFarmName2, originFarmInformation2, originFarmLatitude2, originFarmLongitude2, productNotes2)
 
@@ -169,8 +169,6 @@ contract('SupplyChain', function(accounts) {
                 retailerID: 0,
                 consumerID: 0,
             })
-
-            assert.equal(eventEmitted, true, 'Invalid event emitted')        
         }
         
         // now, let's validate roles-added events
@@ -467,8 +465,6 @@ contract('SupplyChain', function(accounts) {
                 consumerID: 0,
             })
 
-            assert.equal(eventEmitted, true, 'Invalid event emitted')        
-
             // check money wallet: farmer
             let balanceFarmerAfterTx = await web3.eth.getBalance(originFarmerID);
             let valueFarmer = Number(balanceFarmerAfterTx) - Number(balanceFarmerBeforeTx);
@@ -477,6 +473,8 @@ contract('SupplyChain', function(accounts) {
             let balanceDistributorAfterTx = await web3.eth.getBalance(distributorID);
             let valueDistributor = Number(balanceDistributorBeforeTx) - Number(balanceDistributorAfterTx);
             assert((valueDistributor > productPrice) && (valueDistributor < (productPrice*1.05)), 'wrong money transfer found -- distributor')
+
+            assert.equal(eventEmitted, true, 'Invalid event emitted')        
         }
 
         // condition: bad buyItem, wrong item status

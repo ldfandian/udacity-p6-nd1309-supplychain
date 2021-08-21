@@ -6,9 +6,24 @@ See the UML diagram here:
 
 
 
-## Package Dependency
+## Package Dependency (aka. Dev Environment Setup)
+
+Note: The code is written for Solidity v0.4.24. At the time of writing, the current Truffle v5 comes with Solidity v0.5 that requires function mutability and visibility to be specified (please refer to Solidity documentation for more details). To use this starter code, please run npm i -g truffle@4.1.14 to install Truffle v4 with Solidity v0.4.24.
+
 
 ```bash
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# rm -rf node_modules/
+<...>
+
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# npm install -g truffle@4.1.14
+npm WARN deprecated mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+/usr/local/bin/truffle -> /usr/local/lib/node_modules/truffle/build/cli.bundled.js
++ truffle@4.1.14
+added 84 packages from 318 contributors and updated 1 package in 9.452s
+
+root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# npm install
+<...>
+
 rroot@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# truffle version
 Truffle v4.1.14 (core: 4.1.14)
 Solidity v0.4.24 (solc-js)
@@ -33,9 +48,11 @@ root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# cat 
   },
   "dependencies": {
     "truffle-hdwallet-provider": "^1.0.17",
-    "web3": "^1.3.4"
+    "web3": "1.2.1"
   }
 }
+
+
 ```
 
 

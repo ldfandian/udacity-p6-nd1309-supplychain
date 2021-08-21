@@ -69,75 +69,75 @@ contract SupplyChain is Ownable, FarmerRole, ConsumerRole, RetailerRole, Distrib
 
   // Define a modifer that verifies the Caller
   modifier verifyCaller(address _address) {
-    require(msg.sender == _address); 
+    require(msg.sender == _address, 'error: the caller is not allowed for the operation'); 
     _;
   }
 
   // Define a modifier that checks if the paid amount is sufficient to cover the price
   modifier paidEnough(uint _price) { 
-    require(msg.value >= _price); 
+    require(msg.value >= _price, 'error: not pay enough for the item'); 
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Harvested
   modifier harvested(uint _upc) {
-    require(items[_upc].itemState == State.Harvested);
+    require(items[_upc].itemState == State.Harvested, 'error: only harvested item is allowed for the operation');
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Processed
   modifier processed(uint _upc) {
-    require(items[_upc].itemState == State.Processed);
+    require(items[_upc].itemState == State.Processed, 'error: only processed item is allowed for the operation');
     _;
   }
   
   // Define a modifier that checks if an item.state of a upc is Packed
   modifier packed(uint _upc) {
-    require(items[_upc].itemState == State.Packed);
+    require(items[_upc].itemState == State.Packed, 'error: only packed item is allowed for the operation');
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is ForSale
   modifier forSale(uint _upc) {
-    require(items[_upc].itemState == State.ForSale);
+    require(items[_upc].itemState == State.ForSale, 'error: only forsale item is allowed for the operation');
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Sold
   modifier sold(uint _upc) {
-    require(items[_upc].itemState == State.Sold);
+    require(items[_upc].itemState == State.Sold, 'error: only sold item is allowed for the operation');
     _;
   }
   
   // Define a modifier that checks if an item.state of a upc is Shipped
   modifier shipped(uint _upc) {
-    require(items[_upc].itemState == State.Shipped);
+    require(items[_upc].itemState == State.Shipped, 'error: only shipped item is allowed for the operation');
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Received
   modifier received(uint _upc) {
-    require(items[_upc].itemState == State.Received);
+    require(items[_upc].itemState == State.Received, 'error: only received item is allowed for the operation');
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Purchased
   modifier purchased(uint _upc) {
-    require(items[_upc].itemState == State.Purchased);
+    require(items[_upc].itemState == State.Purchased, 'error: only purchased item is allowed for the operation');
     _;
   }
 
   // Define a modifier that checks if the upc id is already token by another existing item
   // We assume the upc is is globally unique (for every single item)
   modifier upcIsEmpty(uint _upc) {
-    require(items[_upc].upc == 0);
+    require(items[_upc].upc == 0, 'error: the upc id is already used');
     _;
   }
 
   // Define a modifier that checks if the upc id is already token by another existing item
   // We assume the upc is is globally unique (for every single item)
   modifier upcItemExists(uint _upc) {
-    require(items[_upc].upc != 0);
+    require(items[_upc].upc != 0, 'error: the upc id does not exist');
     _;
   }
 
