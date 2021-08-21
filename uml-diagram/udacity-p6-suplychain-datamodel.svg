@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="763px" preserveAspectRatio="none" style="width:919px;height:763px;background:#FFFFFF;" version="1.1" viewBox="0 0 919 763" width="919px" zoomAndPan="magnify"><defs><filter height="300%" id="fomcqqcowvi16" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[e8b38f76951d75a61b4cdf53a76e6409]
+class Ownable--><rect codeLine="11" fill="#FEFECE" filter="url(#fomcqqcowvi16)" height="137.6328" id="Ownable" style="stroke:#A80036;stroke-width:1.5;" width="148" x="9" y="435.5"/><ellipse cx="52.35" cy="451.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M54.6938,447.1719 C53.7563,446.7344 53.1625,446.5938 52.2875,446.5938 C49.6625,446.5938 47.6625,448.6719 47.6625,451.3906 L47.6625,452.5156 C47.6625,455.0938 49.7719,456.9844 52.6625,456.9844 C53.8813,456.9844 55.0375,456.6875 55.7875,456.1406 C56.3656,455.7344 56.6938,455.2813 56.6938,454.8906 C56.6938,454.4375 56.3031,454.0469 55.8344,454.0469 C55.6156,454.0469 55.4125,454.125 55.225,454.3125 C54.7719,454.7969 54.7719,454.7969 54.5844,454.8906 C54.1625,455.1563 53.475,455.2813 52.7094,455.2813 C50.6625,455.2813 49.3656,454.1875 49.3656,452.4844 L49.3656,451.3906 C49.3656,449.6094 50.6156,448.2969 52.35,448.2969 C52.9281,448.2969 53.5375,448.4531 54.0063,448.7031 C54.4906,448.9844 54.6625,449.2031 54.7563,449.6094 C54.8188,450.0156 54.85,450.1406 54.9906,450.2656 C55.1313,450.4063 55.3656,450.5156 55.5844,450.5156 C55.85,450.5156 56.1156,450.375 56.2875,450.1563 C56.3969,450 56.4281,449.8125 56.4281,449.3906 L56.4281,447.9688 C56.4281,447.5313 56.4125,447.4063 56.3188,447.25 C56.1625,446.9844 55.8813,446.8438 55.5844,446.8438 C55.2875,446.8438 55.0844,446.9375 54.8656,447.25 L54.6938,447.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="72.65" y="455.6543">Ownable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="10" x2="156" y1="467.5" y2="467.5"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="17" y="475.5"/><a href="address" target="_top" title="address" xlink:actuate="onRequest" xlink:href="address" xlink:show="new" xlink:title="address" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="45" x="29" y="481.7104">address</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="58" x="78" y="481.7104">origOwner</text><line style="stroke:#A80036;stroke-width:1.5;" x1="10" x2="156" y1="488.3047" y2="488.3047"/><polygon fill="#FFFF44" points="20,494.3047,24,498.3047,20,502.3047,16,498.3047" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="105" x="29" y="502.5151">__constructor__</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="134" y="502.5151">()</text><ellipse cx="20" cy="512.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="54" x="29" y="515.3198">&#128269;owner()</text><ellipse cx="20" cy="524.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="29" y="528.1245">&#128269;isOwner()</text><ellipse cx="20" cy="537.7188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="29" y="540.9292">renounceOwnership()</text><ellipse cx="20" cy="550.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="29" y="553.7339">transferOwnership()</text><polygon fill="#FFFF44" points="20,558.3281,24,562.3281,20,566.3281,16,562.3281" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="29" y="566.5386">_transferOwnership()</text><!--MD5=[d880429f06877f77d04df3530938df96]
+class Roles--><rect codeLine="33" fill="#FEFECE" filter="url(#fomcqqcowvi16)" height="86.4141" id="Roles" style="stroke:#A80036;stroke-width:1.5;" width="79" x="508.5" y="663"/><ellipse cx="530.7" cy="679" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M532.7781,680.8125 L533.1688,681.7969 L532.7781,681.7969 C532.325,681.7969 532.2156,681.8125 532.0594,681.9219 C531.8094,682.0781 531.6531,682.3594 531.6531,682.6563 C531.6531,682.9219 531.7938,683.1719 532.0125,683.3281 C532.1531,683.4531 532.3563,683.5 532.7781,683.5 L535.1375,683.5 C535.4969,683.5 535.7156,683.4688 535.8563,683.375 C536.1063,683.2344 536.2625,682.9375 536.2625,682.6563 C536.2625,682.375 536.1219,682.125 535.9031,681.9688 C535.7313,681.8281 535.575,681.7969 535.1063,681.7969 L531.7156,673.5938 L528.0438,673.5938 C527.5906,673.5938 527.4656,673.6094 527.3094,673.7031 C527.0594,673.875 526.9031,674.1563 526.9031,674.4375 C526.9031,674.7188 527.0438,674.9688 527.2625,675.1406 C527.4344,675.25 527.6063,675.2813 528.0438,675.2813 L529.1219,675.2813 L526.4813,681.7969 C526.0594,681.7969 525.9031,681.8125 525.7469,681.9219 C525.4969,682.0781 525.3406,682.3594 525.3406,682.6563 C525.3406,683.2188 525.7156,683.5 526.4656,683.5 L528.7313,683.5 C529.0906,683.5 529.3094,683.4688 529.4344,683.375 C529.7,683.2344 529.8406,682.9375 529.8406,682.6563 C529.8406,682.375 529.7156,682.125 529.4969,681.9531 C529.325,681.8281 529.1844,681.7969 528.7313,681.7969 L528.3406,681.7969 L528.7313,680.8125 L532.7781,680.8125 Z M532.075,679.1094 L529.4031,679.1094 L530.7469,675.8438 L532.075,679.1094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="31" x="546.3" y="683.1543">Roles</text><line style="stroke:#A80036;stroke-width:1.5;" x1="509.5" x2="586.5" y1="695" y2="695"/><line style="stroke:#A80036;stroke-width:1.5;" x1="509.5" x2="586.5" y1="703" y2="703"/><polygon fill="#FFFF44" points="519.5,709,523.5,713,519.5,717,515.5,713" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="528.5" y="717.2104">add()</text><polygon fill="#FFFF44" points="519.5,721.8047,523.5,725.8047,519.5,729.8047,515.5,725.8047" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="53" x="528.5" y="730.0151">remove()</text><polygon fill="#FFFF44" points="519.5,734.6094,523.5,738.6094,519.5,742.6094,515.5,738.6094" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="39" x="528.5" y="742.8198">&#128269;has()</text><!--MD5=[8c4c1e3faa84663568cc2ab3ad733aef]
+class RetailerRole--><rect codeLine="51" fill="#FEFECE" filter="url(#fomcqqcowvi16)" height="163.2422" id="RetailerRole" style="stroke:#A80036;stroke-width:1.5;" width="152" x="192" y="423"/><ellipse cx="229.05" cy="439" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M231.3938,434.6719 C230.4563,434.2344 229.8625,434.0938 228.9875,434.0938 C226.3625,434.0938 224.3625,436.1719 224.3625,438.8906 L224.3625,440.0156 C224.3625,442.5938 226.4719,444.4844 229.3625,444.4844 C230.5813,444.4844 231.7375,444.1875 232.4875,443.6406 C233.0656,443.2344 233.3938,442.7813 233.3938,442.3906 C233.3938,441.9375 233.0031,441.5469 232.5344,441.5469 C232.3156,441.5469 232.1125,441.625 231.925,441.8125 C231.4719,442.2969 231.4719,442.2969 231.2844,442.3906 C230.8625,442.6563 230.175,442.7813 229.4094,442.7813 C227.3625,442.7813 226.0656,441.6875 226.0656,439.9844 L226.0656,438.8906 C226.0656,437.1094 227.3156,435.7969 229.05,435.7969 C229.6281,435.7969 230.2375,435.9531 230.7063,436.2031 C231.1906,436.4844 231.3625,436.7031 231.4563,437.1094 C231.5188,437.5156 231.55,437.6406 231.6906,437.7656 C231.8313,437.9063 232.0656,438.0156 232.2844,438.0156 C232.55,438.0156 232.8156,437.875 232.9875,437.6563 C233.0969,437.5 233.1281,437.3125 233.1281,436.8906 L233.1281,435.4688 C233.1281,435.0313 233.1125,434.9063 233.0188,434.75 C232.8625,434.4844 232.5813,434.3438 232.2844,434.3438 C231.9875,434.3438 231.7844,434.4375 231.5656,434.75 L231.3938,434.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="71" x="247.95" y="443.1543">RetailerRole</text><line style="stroke:#A80036;stroke-width:1.5;" x1="193" x2="343" y1="455" y2="455"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="62" x="212" y="469.2104">&#128218;Roles for</text><a href="Roles.Role" target="_top" title="Roles.Role" xlink:actuate="onRequest" xlink:href="Roles.Role" xlink:show="new" xlink:title="Roles.Role" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="60" x="278" y="469.2104">Roles.Role</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="216" y="482.0151"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="200" y="488.6094"/><a href="Roles.Role" target="_top" title="Roles.Role" xlink:actuate="onRequest" xlink:href="Roles.Role" xlink:show="new" xlink:title="Roles.Role" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="59" x="212" y="494.8198">Roles.Role</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="47" x="275" y="494.8198">retailers</text><line style="stroke:#A80036;stroke-width:1.5;" x1="193" x2="343" y1="501.4141" y2="501.4141"/><ellipse cx="203" cy="512.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="105" x="212" y="515.6245">__constructor__</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="317" y="515.6245">()</text><ellipse cx="203" cy="525.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="72" x="212" y="528.4292">&#128269;isRetailer()</text><ellipse cx="203" cy="538.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="212" y="541.2339">addRetailer()</text><ellipse cx="203" cy="550.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="212" y="554.0386">renounceRetailer()</text><polygon fill="#FFFF44" points="203,558.6328,207,562.6328,203,566.6328,199,562.6328" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="212" y="566.8433">_addRetailer()</text><polygon fill="#FFFF44" points="203,571.4375,207,575.4375,203,579.4375,199,575.4375" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="212" y="579.6479">_removeRetailer()</text><!--MD5=[3679a8b84d0ba84ec033448a67d26674]
+class FarmerRole--><rect codeLine="75" fill="#FEFECE" filter="url(#fomcqqcowvi16)" height="163.2422" id="FarmerRole" style="stroke:#A80036;stroke-width:1.5;" width="152" x="379" y="423"/><ellipse cx="416.95" cy="439" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M419.2938,434.6719 C418.3563,434.2344 417.7625,434.0938 416.8875,434.0938 C414.2625,434.0938 412.2625,436.1719 412.2625,438.8906 L412.2625,440.0156 C412.2625,442.5938 414.3719,444.4844 417.2625,444.4844 C418.4813,444.4844 419.6375,444.1875 420.3875,443.6406 C420.9656,443.2344 421.2938,442.7813 421.2938,442.3906 C421.2938,441.9375 420.9031,441.5469 420.4344,441.5469 C420.2156,441.5469 420.0125,441.625 419.825,441.8125 C419.3719,442.2969 419.3719,442.2969 419.1844,442.3906 C418.7625,442.6563 418.075,442.7813 417.3094,442.7813 C415.2625,442.7813 413.9656,441.6875 413.9656,439.9844 L413.9656,438.8906 C413.9656,437.1094 415.2156,435.7969 416.95,435.7969 C417.5281,435.7969 418.1375,435.9531 418.6063,436.2031 C419.0906,436.4844 419.2625,436.7031 419.3563,437.1094 C419.4188,437.5156 419.45,437.6406 419.5906,437.7656 C419.7313,437.9063 419.9656,438.0156 420.1844,438.0156 C420.45,438.0156 420.7156,437.875 420.8875,437.6563 C420.9969,437.5 421.0281,437.3125 421.0281,436.8906 L421.0281,435.4688 C421.0281,435.0313 421.0125,434.9063 420.9188,434.75 C420.7625,434.4844 420.4813,434.3438 420.1844,434.3438 C419.8875,434.3438 419.6844,434.4375 419.4656,434.75 L419.2938,434.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="436.05" y="443.1543">FarmerRole</text><line style="stroke:#A80036;stroke-width:1.5;" x1="380" x2="530" y1="455" y2="455"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="62" x="399" y="469.2104">&#128218;Roles for</text><a href="Roles.Role" target="_top" title="Roles.Role" xlink:actuate="onRequest" xlink:href="Roles.Role" xlink:show="new" xlink:title="Roles.Role" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="60" x="465" y="469.2104">Roles.Role</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="403" y="482.0151"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="387" y="488.6094"/><a href="Roles.Role" target="_top" title="Roles.Role" xlink:actuate="onRequest" xlink:href="Roles.Role" xlink:show="new" xlink:title="Roles.Role" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="59" x="399" y="494.8198">Roles.Role</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="44" x="462" y="494.8198">farmers</text><line style="stroke:#A80036;stroke-width:1.5;" x1="380" x2="530" y1="501.4141" y2="501.4141"/><ellipse cx="390" cy="512.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="105" x="399" y="515.6245">__constructor__</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="504" y="515.6245">()</text><ellipse cx="390" cy="525.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="68" x="399" y="528.4292">&#128269;isFarmer()</text><ellipse cx="390" cy="538.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="399" y="541.2339">addFarmer()</text><ellipse cx="390" cy="550.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="102" x="399" y="554.0386">renounceFarmer()</text><polygon fill="#FFFF44" points="390,558.6328,394,562.6328,390,566.6328,386,562.6328" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="399" y="566.8433">_addFarmer()</text><polygon fill="#FFFF44" points="390,571.4375,394,575.4375,390,579.4375,386,575.4375" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="399" y="579.6479">_removeFarmer()</text><!--MD5=[1a9c30c6b491bda22f453748e39bbf60]
+class DistributorRole--><rect codeLine="99" fill="#FEFECE" filter="url(#fomcqqcowvi16)" height="163.2422" id="DistributorRole" style="stroke:#A80036;stroke-width:1.5;" width="152" x="566" y="423"/><ellipse cx="594.95" cy="439" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M597.2938,434.6719 C596.3563,434.2344 595.7625,434.0938 594.8875,434.0938 C592.2625,434.0938 590.2625,436.1719 590.2625,438.8906 L590.2625,440.0156 C590.2625,442.5938 592.3719,444.4844 595.2625,444.4844 C596.4813,444.4844 597.6375,444.1875 598.3875,443.6406 C598.9656,443.2344 599.2938,442.7813 599.2938,442.3906 C599.2938,441.9375 598.9031,441.5469 598.4344,441.5469 C598.2156,441.5469 598.0125,441.625 597.825,441.8125 C597.3719,442.2969 597.3719,442.2969 597.1844,442.3906 C596.7625,442.6563 596.075,442.7813 595.3094,442.7813 C593.2625,442.7813 591.9656,441.6875 591.9656,439.9844 L591.9656,438.8906 C591.9656,437.1094 593.2156,435.7969 594.95,435.7969 C595.5281,435.7969 596.1375,435.9531 596.6063,436.2031 C597.0906,436.4844 597.2625,436.7031 597.3563,437.1094 C597.4188,437.5156 597.45,437.6406 597.5906,437.7656 C597.7313,437.9063 597.9656,438.0156 598.1844,438.0156 C598.45,438.0156 598.7156,437.875 598.8875,437.6563 C598.9969,437.5 599.0281,437.3125 599.0281,436.8906 L599.0281,435.4688 C599.0281,435.0313 599.0125,434.9063 598.9188,434.75 C598.7625,434.4844 598.4813,434.3438 598.1844,434.3438 C597.8875,434.3438 597.6844,434.4375 597.4656,434.75 L597.2938,434.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="89" x="612.05" y="443.1543">DistributorRole</text><line style="stroke:#A80036;stroke-width:1.5;" x1="567" x2="717" y1="455" y2="455"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="62" x="586" y="469.2104">&#128218;Roles for</text><a href="Roles.Role" target="_top" title="Roles.Role" xlink:actuate="onRequest" xlink:href="Roles.Role" xlink:show="new" xlink:title="Roles.Role" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="60" x="652" y="469.2104">Roles.Role</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="590" y="482.0151"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="574" y="488.6094"/><a href="Roles.Role" target="_top" title="Roles.Role" xlink:actuate="onRequest" xlink:href="Roles.Role" xlink:show="new" xlink:title="Roles.Role" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="59" x="586" y="494.8198">Roles.Role</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="649" y="494.8198">distributors</text><line style="stroke:#A80036;stroke-width:1.5;" x1="567" x2="717" y1="501.4141" y2="501.4141"/><ellipse cx="577" cy="512.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="105" x="586" y="515.6245">__constructor__</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="691" y="515.6245">()</text><ellipse cx="577" cy="525.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="586" y="528.4292">&#128269;isDistributor()</text><ellipse cx="577" cy="538.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="586" y="541.2339">addDistributor()</text><ellipse cx="577" cy="550.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="586" y="554.0386">renounceDistributor()</text><polygon fill="#FFFF44" points="577,558.6328,581,562.6328,577,566.6328,573,562.6328" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="586" y="566.8433">_addDistributor()</text><polygon fill="#FFFF44" points="577,571.4375,581,575.4375,577,579.4375,573,575.4375" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="117" x="586" y="579.6479">_removeDistributor()</text><!--MD5=[da202ec8fe27fb724d73cf84a9d09b53]
+class ConsumerRole--><rect codeLine="123" fill="#FEFECE" filter="url(#fomcqqcowvi16)" height="163.2422" id="ConsumerRole" style="stroke:#A80036;stroke-width:1.5;" width="152" x="753" y="423"/><ellipse cx="782.85" cy="439" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M785.1938,434.6719 C784.2563,434.2344 783.6625,434.0938 782.7875,434.0938 C780.1625,434.0938 778.1625,436.1719 778.1625,438.8906 L778.1625,440.0156 C778.1625,442.5938 780.2719,444.4844 783.1625,444.4844 C784.3813,444.4844 785.5375,444.1875 786.2875,443.6406 C786.8656,443.2344 787.1938,442.7813 787.1938,442.3906 C787.1938,441.9375 786.8031,441.5469 786.3344,441.5469 C786.1156,441.5469 785.9125,441.625 785.725,441.8125 C785.2719,442.2969 785.2719,442.2969 785.0844,442.3906 C784.6625,442.6563 783.975,442.7813 783.2094,442.7813 C781.1625,442.7813 779.8656,441.6875 779.8656,439.9844 L779.8656,438.8906 C779.8656,437.1094 781.1156,435.7969 782.85,435.7969 C783.4281,435.7969 784.0375,435.9531 784.5063,436.2031 C784.9906,436.4844 785.1625,436.7031 785.2563,437.1094 C785.3188,437.5156 785.35,437.6406 785.4906,437.7656 C785.6313,437.9063 785.8656,438.0156 786.0844,438.0156 C786.35,438.0156 786.6156,437.875 786.7875,437.6563 C786.8969,437.5 786.9281,437.3125 786.9281,436.8906 L786.9281,435.4688 C786.9281,435.0313 786.9125,434.9063 786.8188,434.75 C786.6625,434.4844 786.3813,434.3438 786.0844,434.3438 C785.7875,434.3438 785.5844,434.4375 785.3656,434.75 L785.1938,434.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87" x="800.15" y="443.1543">ConsumerRole</text><line style="stroke:#A80036;stroke-width:1.5;" x1="754" x2="904" y1="455" y2="455"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="62" x="773" y="469.2104">&#128218;Roles for</text><a href="Roles.Role" target="_top" title="Roles.Role" xlink:actuate="onRequest" xlink:href="Roles.Role" xlink:show="new" xlink:title="Roles.Role" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="60" x="839" y="469.2104">Roles.Role</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="777" y="482.0151"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="761" y="488.6094"/><a href="Roles.Role" target="_top" title="Roles.Role" xlink:actuate="onRequest" xlink:href="Roles.Role" xlink:show="new" xlink:title="Roles.Role" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="59" x="773" y="494.8198">Roles.Role</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="836" y="494.8198">consumers</text><line style="stroke:#A80036;stroke-width:1.5;" x1="754" x2="904" y1="501.4141" y2="501.4141"/><ellipse cx="764" cy="512.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="105" x="773" y="515.6245">__constructor__</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="878" y="515.6245">()</text><ellipse cx="764" cy="525.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="773" y="528.4292">&#128269;isConsumer()</text><ellipse cx="764" cy="538.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="773" y="541.2339">addConsumer()</text><ellipse cx="764" cy="550.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="773" y="554.0386">renounceConsumer()</text><polygon fill="#FFFF44" points="764,558.6328,768,562.6328,764,566.6328,760,562.6328" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="773" y="566.8433">_addConsumer()</text><polygon fill="#FFFF44" points="764,571.4375,768,575.4375,764,579.4375,760,575.4375" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="117" x="773" y="579.6479">_removeConsumer()</text><!--MD5=[7f45976635210019d8fdbf63ea652dc0]
+class SupplyChain--><rect codeLine="148" fill="#FEFECE" filter="url(#fomcqqcowvi16)" height="355.3125" id="SupplyChain" style="stroke:#A80036;stroke-width:1.5;" width="164" x="373" y="7"/><ellipse cx="414.55" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M416.8938,18.6719 C415.9563,18.2344 415.3625,18.0938 414.4875,18.0938 C411.8625,18.0938 409.8625,20.1719 409.8625,22.8906 L409.8625,24.0156 C409.8625,26.5938 411.9719,28.4844 414.8625,28.4844 C416.0813,28.4844 417.2375,28.1875 417.9875,27.6406 C418.5656,27.2344 418.8938,26.7813 418.8938,26.3906 C418.8938,25.9375 418.5031,25.5469 418.0344,25.5469 C417.8156,25.5469 417.6125,25.625 417.425,25.8125 C416.9719,26.2969 416.9719,26.2969 416.7844,26.3906 C416.3625,26.6563 415.675,26.7813 414.9094,26.7813 C412.8625,26.7813 411.5656,25.6875 411.5656,23.9844 L411.5656,22.8906 C411.5656,21.1094 412.8156,19.7969 414.55,19.7969 C415.1281,19.7969 415.7375,19.9531 416.2063,20.2031 C416.6906,20.4844 416.8625,20.7031 416.9563,21.1094 C417.0188,21.5156 417.05,21.6406 417.1906,21.7656 C417.3313,21.9063 417.5656,22.0156 417.7844,22.0156 C418.05,22.0156 418.3156,21.875 418.4875,21.6563 C418.5969,21.5 418.6281,21.3125 418.6281,20.8906 L418.6281,19.4688 C418.6281,19.0313 418.6125,18.9063 418.5188,18.75 C418.3625,18.4844 418.0813,18.3438 417.7844,18.3438 C417.4875,18.3438 417.2844,18.4375 417.0656,18.75 L416.8938,18.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="434.45" y="27.1543">SupplyChain</text><line style="stroke:#A80036;stroke-width:1.5;" x1="374" x2="536" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="49" x="393" y="53.2104">Ownable</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="66" x="393" y="66.0151">FarmerRole</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="83" x="393" y="78.8198">ConsumerRole</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="69" x="393" y="91.6245">RetailerRole</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="84" x="393" y="104.4292">DistributorRole</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="397" y="117.2339"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="397" y="130.0386"/><polygon fill="none" points="384,134.6328,388,138.6328,384,142.6328,380,138.6328" style="stroke:#B38D22;stroke-width:1.0;"/><a href="uint" target="_top" title="uint" xlink:actuate="onRequest" xlink:href="uint" xlink:show="new" xlink:title="uint" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="21" x="393" y="142.8433">uint</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20" x="418" y="142.8433">upc</text><polygon fill="none" points="384,147.4375,388,151.4375,384,155.4375,380,151.4375" style="stroke:#B38D22;stroke-width:1.0;"/><a href="uint" target="_top" title="uint" xlink:actuate="onRequest" xlink:href="uint" xlink:show="new" xlink:title="uint" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="21" x="393" y="155.6479">uint</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19" x="418" y="155.6479">sku</text><polygon fill="none" points="384,160.2422,388,164.2422,384,168.2422,380,164.2422" style="stroke:#B38D22;stroke-width:1.0;"/><a href="mapping" target="_top" title="mapping" xlink:actuate="onRequest" xlink:href="mapping" xlink:show="new" xlink:title="mapping" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="65" x="393" y="168.4526">uint=&gt;Item</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="32" x="466" y="168.4526">items</text><polygon fill="none" points="384,173.0469,388,177.0469,384,181.0469,380,177.0469" style="stroke:#B38D22;stroke-width:1.0;"/><a href="mapping" target="_top" title="mapping" xlink:actuate="onRequest" xlink:href="mapping" xlink:show="new" xlink:title="mapping" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="59" x="393" y="181.2573">uint=&gt;null</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="460" y="181.2573">itemsHistory</text><polygon fill="none" points="384,185.8516,388,189.8516,384,193.8516,380,189.8516" style="stroke:#B38D22;stroke-width:1.0;"/><a href="State" target="_top" title="State" xlink:actuate="onRequest" xlink:href="State" xlink:show="new" xlink:title="State" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="31" x="393" y="194.062">State</text></a><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="71" x="428" y="194.062">defaultState</text><line style="stroke:#A80036;stroke-width:1.5;" x1="374" x2="536" y1="200.6563" y2="200.6563"/><ellipse cx="384" cy="211.6563" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="11" x="393" y="214.8667">&#128176;</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="105" x="404" y="214.8667">__constructor__</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="509" y="214.8667">()</text><ellipse cx="384" cy="224.4609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="23" x="393" y="227.6714">kill()</text><ellipse cx="384" cy="237.2656" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="393" y="240.4761">harvestItem()</text><ellipse cx="384" cy="250.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="393" y="253.2808">processItem()</text><ellipse cx="384" cy="262.875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="393" y="266.0854">packItem()</text><ellipse cx="384" cy="275.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="54" x="393" y="278.8901">sellItem()</text><ellipse cx="384" cy="288.4844" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="393" y="291.6948">&#128176;buyItem()</text><ellipse cx="384" cy="301.2891" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="393" y="304.4995">shipItem()</text><ellipse cx="384" cy="314.0938" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="393" y="317.3042">receiveItem()</text><ellipse cx="384" cy="326.8984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="393" y="330.1089">purchaseItem()</text><ellipse cx="384" cy="339.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="393" y="342.9136">&#128269;fetchItemBufferOne()</text><ellipse cx="384" cy="352.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="393" y="355.7183">&#128269;fetchItemBufferTwo()</text><!--MD5=[455d002ba1548dceaa811cea5deb0a8c]
+link RetailerRole to Roles--><path codeLine="70" d="M332.007,586.275 C347.804,603.098 365.531,619.727 384,633 C415.994,655.9926 456.491,673.8627 489.238,686.0486 " fill="none" id="RetailerRole-to-Roles" style="stroke:#556B2F;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="491.985,679.596,508.48,692.8964,487.291,692.7857,491.985,679.596" style="stroke:#556B2F;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-style="italic" lengthAdjust="spacing" textLength="91" x="385" y="629.0669">for Roles.Role</text><!--MD5=[f4d3b2072737e8b1c0a7217a76edd590]
+link FarmerRole to Roles--><path codeLine="94" d="M473.39,586.18 C478.406,602.124 484.563,618.423 492,633 C494.186,637.285 496.641,641.566 499.272,645.785 " fill="none" id="FarmerRole-to-Roles" style="stroke:#556B2F;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="505.282,642.172,510.827,662.6228,493.739,650.0937,505.282,642.172" style="stroke:#556B2F;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-style="italic" lengthAdjust="spacing" textLength="91" x="493" y="629.0669">for Roles.Role</text><!--MD5=[64929e1935b136cd56d0889d0ac4fc88]
+link DistributorRole to Roles--><path codeLine="118" d="M610.274,586.092 C603.592,601.806 596.334,618.041 589,633 C587.045,636.988 584.965,641.061 582.819,645.141 " fill="none" id="DistributorRole-to-Roles" style="stroke:#556B2F;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="588.892,648.625,573.168,662.8283,576.603,641.919,588.892,648.625" style="stroke:#556B2F;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-style="italic" lengthAdjust="spacing" textLength="91" x="599" y="629.0669">for Roles.Role</text><!--MD5=[1f8ad49c0f94e5ca10ce3d77301c5c6b]
+link ConsumerRole to Roles--><path codeLine="142" d="M755.074,586.204 C737.632,602.842 718.429,619.412 699,633 C670.437,652.9761 635.47,670.0462 606.379,682.5448 " fill="none" id="ConsumerRole-to-Roles" style="stroke:#556B2F;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="608.941,689.0607,587.785,690.2643,603.573,676.1307,608.941,689.0607" style="stroke:#556B2F;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-style="italic" lengthAdjust="spacing" textLength="91" x="720" y="629.0669">for Roles.Role</text><!--MD5=[3e82ff42454617943e5893081134de4c]
+link SupplyChain to Ownable--><path codeLine="181" d="M372.818,254.127 C316.569,301.301 240.435,365.552 174,423 C173.491,423.44 172.981,423.881 172.47,424.324 " fill="none" id="SupplyChain-to-Ownable" style="stroke:#B8860B;stroke-width:1.0;"/><polygon fill="none" points="177.054,429.614,157.372,437.465,167.862,419.054,177.054,429.614" style="stroke:#B8860B;stroke-width:1.0;"/><!--MD5=[c09ec81f821113d8d88add741b4eb578]
+link SupplyChain to FarmerRole--><path codeLine="182" d="M455,362.169 C455,376.053 455,389.756 455,402.846 " fill="none" id="SupplyChain-to-FarmerRole" style="stroke:#B8860B;stroke-width:1.0;"/><polygon fill="none" points="462,402.851,455,422.851,448,402.85,462,402.851" style="stroke:#B8860B;stroke-width:1.0;"/><!--MD5=[6932e678a1b2b96a6006c7c48040b1f0]
+link SupplyChain to ConsumerRole--><path codeLine="183" d="M537.175,255.026 C593.02,302.319 668.537,366.354 735,423 C735.816,423.696 736.637,424.395 737.46,425.097 " fill="none" id="SupplyChain-to-ConsumerRole" style="stroke:#B8860B;stroke-width:1.0;"/><polygon fill="none" points="742.174,419.918,752.842,438.226,733.085,430.566,742.174,419.918" style="stroke:#B8860B;stroke-width:1.0;"/><!--MD5=[1ab728d1aa848fb9add8d9be993c8096]
+link SupplyChain to RetailerRole--><path codeLine="184" d="M372.979,324.979 C357.109,351.967 340.791,379.716 325.891,405.054 " fill="none" id="SupplyChain-to-RetailerRole" style="stroke:#B8860B;stroke-width:1.0;"/><polygon fill="none" points="331.746,408.908,315.573,422.6,319.677,401.811,331.746,408.908" style="stroke:#B8860B;stroke-width:1.0;"/><!--MD5=[0ffd5bdaaac2a05e4d28308e7c7f1987]
+link SupplyChain to DistributorRole--><path codeLine="185" d="M537.021,324.979 C552.891,351.967 569.209,379.716 584.109,405.054 " fill="none" id="SupplyChain-to-DistributorRole" style="stroke:#B8860B;stroke-width:1.0;"/><polygon fill="none" points="590.323,401.811,594.427,422.6,578.254,408.908,590.323,401.811" style="stroke:#B8860B;stroke-width:1.0;"/><!--MD5=[ce1e0c89eb783b6082aa6087ce7e4825]
+@startuml
+' - - generated by: https://marketplace.visualstudio.com/items?itemName=tintinweb.solidity-visual-auditor
+'
+' - - for auto-render install: https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
+' - - options - -
+
+
+
+' - - classes - -
+
+
+class Ownable {
+    ' - - inheritance - -
+
+    ' - - usingFor - -
+
+    ' - - vars - -
+	-[[address]] origOwner
+
+    ' - - methods - -
+	#**__constructor__**()
+	+🔍owner()
+	+🔍isOwner()
+	+renounceOwnership()
+	+transferOwnership()
+	#_transferOwnership()
+
+}
+' - - inheritance / usingFor - -
+
+' - - classes - -
+
+
+abstract Roles {
+    ' - - inheritance - -
+
+    ' - - usingFor - -
+
+    ' - - vars - -
+
+    ' - - methods - -
+	#add()
+	#remove()
+	#🔍has()
+
+}
+' - - inheritance / usingFor - -
+
+' - - classes - -
+
+
+class RetailerRole {
+    ' - - inheritance - -
+
+    ' - - usingFor - -
+	{abstract}📚Roles for [[Roles.Role]]
+
+    ' - - vars - -
+	-[[Roles.Role]] retailers
+
+    ' - - methods - -
+	+**__constructor__**()
+	+🔍isRetailer()
+	+addRetailer()
+	+renounceRetailer()
+	#_addRetailer()
+	#_removeRetailer()
+
+}
+' - - inheritance / usingFor - -
+RetailerRole ..[#DarkOliveGreen]|> Roles : //for Roles.Role//
+
+' - - classes - -
+
+
+class FarmerRole {
+    ' - - inheritance - -
+
+    ' - - usingFor - -
+	{abstract}📚Roles for [[Roles.Role]]
+
+    ' - - vars - -
+	-[[Roles.Role]] farmers
+
+    ' - - methods - -
+	+**__constructor__**()
+	+🔍isFarmer()
+	+addFarmer()
+	+renounceFarmer()
+	#_addFarmer()
+	#_removeFarmer()
+
+}
+' - - inheritance / usingFor - -
+FarmerRole ..[#DarkOliveGreen]|> Roles : //for Roles.Role//
+
+' - - classes - -
+
+
+class DistributorRole {
+    ' - - inheritance - -
+
+    ' - - usingFor - -
+	{abstract}📚Roles for [[Roles.Role]]
+
+    ' - - vars - -
+	-[[Roles.Role]] distributors
+
+    ' - - methods - -
+	+**__constructor__**()
+	+🔍isDistributor()
+	+addDistributor()
+	+renounceDistributor()
+	#_addDistributor()
+	#_removeDistributor()
+
+}
+' - - inheritance / usingFor - -
+DistributorRole ..[#DarkOliveGreen]|> Roles : //for Roles.Role//
+
+' - - classes - -
+
+
+class ConsumerRole {
+    ' - - inheritance - -
+
+    ' - - usingFor - -
+	{abstract}📚Roles for [[Roles.Role]]
+
+    ' - - vars - -
+	-[[Roles.Role]] consumers
+
+    ' - - methods - -
+	+**__constructor__**()
+	+🔍isConsumer()
+	+addConsumer()
+	+renounceConsumer()
+	#_addConsumer()
+	#_removeConsumer()
+
+}
+' - - inheritance / usingFor - -
+ConsumerRole ..[#DarkOliveGreen]|> Roles : //for Roles.Role//
+
+
+' - - classes - -
+
+
+class SupplyChain {
+    ' - - inheritance - -
+	{abstract}Ownable
+	{abstract}FarmerRole
+	{abstract}ConsumerRole
+	{abstract}RetailerRole
+	{abstract}DistributorRole
+
+    ' - - usingFor - -
+
+    ' - - vars - -
+	#[[uint]] upc
+	#[[uint]] sku
+	#[[mapping uint=>Item ]] items
+	#[[mapping uint=>null ]] itemsHistory
+	#{static}[[State]] defaultState
+
+    ' - - methods - -
+	+💰**__constructor__**()
+	+kill()
+	+harvestItem()
+	+processItem()
+	+packItem()
+	+sellItem()
+	+💰buyItem()
+	+shipItem()
+	+receiveItem()
+	+purchaseItem()
+	+🔍fetchItemBufferOne()
+	+🔍fetchItemBufferTwo()
+
+}
+' - - inheritance / usingFor - -
+SupplyChain - -[#DarkGoldenRod]|> Ownable
+SupplyChain - -[#DarkGoldenRod]|> FarmerRole
+SupplyChain - -[#DarkGoldenRod]|> ConsumerRole
+SupplyChain - -[#DarkGoldenRod]|> RetailerRole
+SupplyChain - -[#DarkGoldenRod]|> DistributorRole
+@enduml
+
+@startuml
+
+
+
+
+
+class Ownable {
+
+
+	-[[address]] origOwner
+
+	#**__constructor__**()
+	+🔍owner()
+	+🔍isOwner()
+	+renounceOwnership()
+	+transferOwnership()
+	#_transferOwnership()
+
+}
+
+
+
+abstract Roles {
+
+
+
+	#add()
+	#remove()
+	#🔍has()
+
+}
+
+
+
+class RetailerRole {
+
+	{abstract}📚Roles for [[Roles.Role]]
+
+	-[[Roles.Role]] retailers
+
+	+**__constructor__**()
+	+🔍isRetailer()
+	+addRetailer()
+	+renounceRetailer()
+	#_addRetailer()
+	#_removeRetailer()
+
+}
+RetailerRole ..[#DarkOliveGreen]|> Roles : //for Roles.Role//
+
+
+
+class FarmerRole {
+
+	{abstract}📚Roles for [[Roles.Role]]
+
+	-[[Roles.Role]] farmers
+
+	+**__constructor__**()
+	+🔍isFarmer()
+	+addFarmer()
+	+renounceFarmer()
+	#_addFarmer()
+	#_removeFarmer()
+
+}
+FarmerRole ..[#DarkOliveGreen]|> Roles : //for Roles.Role//
+
+
+
+class DistributorRole {
+
+	{abstract}📚Roles for [[Roles.Role]]
+
+	-[[Roles.Role]] distributors
+
+	+**__constructor__**()
+	+🔍isDistributor()
+	+addDistributor()
+	+renounceDistributor()
+	#_addDistributor()
+	#_removeDistributor()
+
+}
+DistributorRole ..[#DarkOliveGreen]|> Roles : //for Roles.Role//
+
+
+
+class ConsumerRole {
+
+	{abstract}📚Roles for [[Roles.Role]]
+
+	-[[Roles.Role]] consumers
+
+	+**__constructor__**()
+	+🔍isConsumer()
+	+addConsumer()
+	+renounceConsumer()
+	#_addConsumer()
+	#_removeConsumer()
+
+}
+ConsumerRole ..[#DarkOliveGreen]|> Roles : //for Roles.Role//
+
+
+
+
+class SupplyChain {
+	{abstract}Ownable
+	{abstract}FarmerRole
+	{abstract}ConsumerRole
+	{abstract}RetailerRole
+	{abstract}DistributorRole
+
+
+	#[[uint]] upc
+	#[[uint]] sku
+	#[[mapping uint=>Item ]] items
+	#[[mapping uint=>null ]] itemsHistory
+	#{static}[[State]] defaultState
+
+	+💰**__constructor__**()
+	+kill()
+	+harvestItem()
+	+processItem()
+	+packItem()
+	+sellItem()
+	+💰buyItem()
+	+shipItem()
+	+receiveItem()
+	+purchaseItem()
+	+🔍fetchItemBufferOne()
+	+🔍fetchItemBufferTwo()
+
+}
+SupplyChain - -[#DarkGoldenRod]|> Ownable
+SupplyChain - -[#DarkGoldenRod]|> FarmerRole
+SupplyChain - -[#DarkGoldenRod]|> ConsumerRole
+SupplyChain - -[#DarkGoldenRod]|> RetailerRole
+SupplyChain - -[#DarkGoldenRod]|> DistributorRole
+@enduml
+
+PlantUML version 1.2021.10beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,6 +1,14 @@
+## UML Diagram
+
+
+See the UML diagram here:
+- [UML Diagram](./uml-diagram/)
+
+
+
 ## Package Dependency
 
-```
+```bash
 rroot@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# truffle version
 Truffle v4.1.14 (core: 4.1.14)
 Solidity v0.4.24 (solc-js)
@@ -29,6 +37,18 @@ root@0c227cbd3cc5:/mnt/devroot/src/udacity-p6-nd1309-supplychain/project-6# cat 
   }
 }
 ```
+
+
+## Runing the project
+
+For running 'Supply Chain frond end Dapp', please run from the terminal, inside the project folder:
+
+```bash
+npm run dev
+```
+
+Then allow metamask permission and connect to the Local Blockchain / Public Rinkeby Testnet Blockchain.
+
 
 
 # Supply chain & data auditing (on local chain)
